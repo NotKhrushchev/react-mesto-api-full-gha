@@ -6,7 +6,7 @@ const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-const port = process.env.PORT || '3001';
+const port = process.env.PORT || '3000';
 const DATABASE_URL = process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017/mestodb';
 
 const routes = require('./routes/index');

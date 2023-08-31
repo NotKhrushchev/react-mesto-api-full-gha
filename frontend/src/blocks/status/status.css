@@ -1,0 +1,10 @@
+.status {
+    color: black;
+    padding: 60px 36px 37px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    min-width: 430px;
+    box-sizing: border-box;
+}

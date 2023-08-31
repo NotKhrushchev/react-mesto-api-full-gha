@@ -1,0 +1,9 @@
+.header__userLogin {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 22px;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

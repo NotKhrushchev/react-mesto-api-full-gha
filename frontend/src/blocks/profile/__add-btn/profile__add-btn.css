@@ -1,0 +1,25 @@
+.profile__add-btn {
+    min-width: 150px;
+    min-height: 50px;
+    background-image: url(../../../images/Plus.svg);
+    border: 2px solid white;
+    color: white;
+    margin-left: auto;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 911px){
+    .profile__add-btn {
+        width: 100%;
+        max-width: 580px;
+        margin: 32px auto 0;
+        background-size: 16px 16px;
+    }
+}
+
+@media screen and (max-width: 614px){
+    .profile__add-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}

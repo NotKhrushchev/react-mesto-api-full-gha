@@ -1,0 +1,10 @@
+.auth__nav-link {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.auth__nav-link:hover {
+    opacity: 0.6;
+}

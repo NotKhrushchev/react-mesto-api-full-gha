@@ -1,0 +1,14 @@
+.form__input-error {
+    color: red;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 5px;
+    min-height: 30px;
+    max-width: 358px;
+}
+
+@media screen and (max-width: 911px){
+    .form__input-error {
+        max-width: 238px;
+    }
+}

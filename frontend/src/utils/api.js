@@ -98,7 +98,7 @@ class Api {
 }
 
 const api = new Api({
-    baseUrl: 'http://localhost:3001',
+    baseUrl: 'http://api.vmmesto.nomoredomainsicu.ru',
 });
 
 export default api;

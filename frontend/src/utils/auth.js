@@ -56,7 +56,7 @@ class Auth {
 }
 
 const auth = new Auth({
-    baseUrl: 'http://localhost:3001'
+    baseUrl: 'http://api.vmmesto.nomoredomainsicu.ru'
 });
 
 export default auth;

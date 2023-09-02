@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
@@ -6,8 +7,8 @@ const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-const port = process.env.PORT || '3000';
-const DATABASE_URL = process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017/mestodb';
+const { PORT = 3000} = process.env;
+const { DATABASE_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 
 const routes = require('./routes/index');
 const { login, createUser } = require('./controllers/users');
@@ -59,4 +60,4 @@ app.use(errorLogger);
 app.use(errors());
 app.use(errorHandler);
 
-app.listen(port);
+app.listen(PORT);

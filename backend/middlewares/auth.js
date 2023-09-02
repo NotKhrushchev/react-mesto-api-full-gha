@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const { JWT_SECRET = 'chort' } = process.env;
 const { AuthorizationErr } = require('../errors');
 
 const authError = 'Необходима авторизация';
@@ -12,7 +13,7 @@ const auth = (req, res, next) => {
   const token = authorization.replace('Bearer ', '');
   let payload;
   try {
-    payload = jwt.verify(token, 'key');
+    payload = jwt.verify(token, JWT_SECRET);
   } catch (err) {
     next(new AuthorizationErr(authError));
   }

@@ -1,5 +1,5 @@
 const { CREATED, OK } = require('http-status-codes').StatusCodes;
-
+const { JWT_SECRET = 'chort' } = process.env;
 const jwt = require('jsonwebtoken');
 
 const bcrypt = require('bcryptjs');
@@ -133,7 +133,7 @@ const login = (req, res, next) => {
           if (!matched) {
             throw new AuthorizationErr();
           }
-          const token = jwt.sign({ _id: user._id }, 'key', { expiresIn: '7d' });
+          const token = jwt.sign({ _id: user._id }, JWT_SECRET, { expiresIn: '7d' });
           return res.send({ token });
         });
     })

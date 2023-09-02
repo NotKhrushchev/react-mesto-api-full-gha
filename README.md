@@ -11,6 +11,6 @@
 
 IP-адрес x.x.x.x
 
-Frontend https://...
+Frontend https://vmmesto.nomoredomainsicu.ru
 
-Backend https://...
+Backend https://api.vmmesto.nomoredomainsicu.ru

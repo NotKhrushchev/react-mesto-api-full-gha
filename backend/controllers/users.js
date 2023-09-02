@@ -1,4 +1,3 @@
-const { JWT_SECRET = 'dev-secret' } = process.env;
 const { CREATED, OK } = require('http-status-codes').StatusCodes;
 
 const jwt = require('jsonwebtoken');
@@ -134,7 +133,7 @@ const login = (req, res, next) => {
           if (!matched) {
             throw new AuthorizationErr();
           }
-          const token = jwt.sign({ _id: user._id }, JWT_SECRET, { expiresIn: '7d' });
+          const token = jwt.sign({ _id: user._id }, 'key', { expiresIn: '7d' });
           return res.send({ token });
         });
     })

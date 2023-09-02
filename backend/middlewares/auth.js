@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+
 const { JWT_SECRET = 'chort' } = process.env;
 const { AuthorizationErr } = require('../errors');
 

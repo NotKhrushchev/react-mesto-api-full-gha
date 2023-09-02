@@ -1,4 +1,5 @@
 const { CREATED, OK } = require('http-status-codes').StatusCodes;
+
 const { JWT_SECRET = 'chort' } = process.env;
 const jwt = require('jsonwebtoken');
 

@@ -3,7 +3,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
-const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
@@ -16,6 +15,7 @@ const { auth } = require('./middlewares/auth');
 const { NotFoundErr } = require('./errors');
 const { errorHandler } = require('./middlewares/errorHandler');
 const { signupCelebrate, signinCelebrate } = require('./middlewares/celebrateValidators');
+const { cors } = require('./middlewares/cors');
 
 const app = express();
 

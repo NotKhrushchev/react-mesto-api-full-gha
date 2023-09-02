@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
 const cors = require('cors');
+require('dotenv').config();
 const rateLimit = require('express-rate-limit');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 

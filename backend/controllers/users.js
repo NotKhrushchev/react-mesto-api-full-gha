@@ -1,4 +1,3 @@
-const { NODE_ENV, JWT_SECRET } = process.env;
 const { CREATED, OK } = require('http-status-codes').StatusCodes;
 
 const jwt = require('jsonwebtoken');
@@ -134,7 +133,7 @@ const login = (req, res, next) => {
           if (!matched) {
             throw new AuthorizationErr();
           }
-          const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' });
+          const token = jwt.sign({ _id: user._id }, 'key', { expiresIn: '7d' });
           return res.send({ token });
         });
     })

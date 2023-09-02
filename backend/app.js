@@ -38,6 +38,13 @@ app.use(limiter);
 
 app.use(requestLogger);
 
+// УДАЛИТЬ ПОСЛЕ РЕВЬЮ
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 // Роут аутентификации
 app.post('/signin', signinCelebrate, login);
 

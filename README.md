@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.49.53
 
 Frontend https://vmmesto.nomoredomainsicu.ru
 
